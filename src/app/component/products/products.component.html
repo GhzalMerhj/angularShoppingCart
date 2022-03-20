@@ -1,0 +1,53 @@
+<!-- start products categories -->
+
+<div class="card-top container-fluid">
+ <div class="container d-flex">
+    <div class="item">
+       <a>
+         <img>
+         <i class="fa fa-address-card"></i>
+         <h6> All Products</h6>
+       </a>
+    </div>
+    <div class="item">
+      <a>
+        <i class="fa fa-address-card"></i>
+        <img>
+        <h6> Fashion</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <i class="fa fa-address-card"></i>
+        <img>
+        <h6> MakeUp</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <i class="fa fa-address-card"></i>
+        <img>
+        <h6> Jewllery</h6>
+      </a>
+    </div>
+ </div>
+</div>
+
+<!-- end products categories -->
+<!-- start products items  -->
+<div class="container">
+ <div class="row">
+   <ng-container *ngFor="let product of productList" >
+       <div class="card col-md-3 product-item">
+         <img [src]="[product.image]" alt="">
+         <h5>{{ product.title }}</h5>
+         <p>{{ product.description }}</p>
+         <p><strong>Price :</strong>$ {{ product.price }}</p>
+         <button class="btn btn-primary" (click)="addToCart(product)"> Add To Cart</button>
+       </div>
+   </ng-container>
+
+
+ </div>
+</div>
+<!-- end products items -->
